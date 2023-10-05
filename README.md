@@ -1,4 +1,4 @@
-Entrega del sexto laboratorio.
+Entrega del séptimo laboratorio.
 
 
-He hecho completado los apartados obligatorios y opcional.
+He completado el apartado obligatorio y los opcionales.

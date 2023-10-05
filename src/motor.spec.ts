@@ -50,8 +50,29 @@ describe ("generarNumeroAleatorio", () => {
         const numeroGenerado = generarNumeroAleatorio();
 
         // Assert
-        expect(numeroGenerado).toBeGreaterThanOrEqual(1);
-        expect(numeroGenerado).toBeLessThanOrEqual(10);
+        expect(numeroGenerado).toBe(9);
+    });
+    
+    it("Vamos a generar un número aleatorio para confirmar que la función opera correctamente" , () => {
+        // Arrange
+        vi.spyOn(Math, "random").mockReturnValue(0.7);
+
+        // Act
+        const numeroGenerado = generarNumeroAleatorio();
+
+        // Assert
+        expect(numeroGenerado).toBe(8);
+    });
+    
+    it("Vamos a generar un número aleatorio para confirmar que la función opera correctamente" , () => {
+        // Arrange
+        vi.spyOn(Math, "random").mockReturnValue(0.5);
+
+        // Act
+        const numeroGenerado = generarNumeroAleatorio();
+
+        // Assert
+        expect(numeroGenerado).toBe(6);
     });
 });
 
@@ -65,6 +86,15 @@ describe('dameValorCarta', () => {
         expect(resultado).toEqual(0.5);
     });
     
+    it("La función devolverá 0,5 cuando el valor de la carta es mayor que 7,5", () => {
+        // Arrange
+        // Act
+        const resultado = dameValorCarta(10);
+        
+        // Assert
+        expect(resultado).toEqual(0.5);
+    });
+
     it("La función devolverá el valor exacto de la carta cuando el valor de la carta sea menor o igual que 7,5", () => {
         // Arrange
         // Act
@@ -72,5 +102,14 @@ describe('dameValorCarta', () => {
         
         // Assert
         expect(resultado).toEqual(6);
+    });
+    
+    it("La función devolverá el valor exacto de la carta cuando el valor de la carta sea menor o igual que 7,5", () => {
+        // Arrange
+        // Act
+        const resultado = dameValorCarta(2);
+        
+        // Assert
+        expect(resultado).toEqual(2);
     });
   });

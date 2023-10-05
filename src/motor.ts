@@ -8,6 +8,7 @@ export const dameValorCarta = (carta: number): number => carta > 7.5 ? 0.5 : car
 
 export const obtenerEstadoPartida = (): ObjetoPartida => {
     if (partida.puntuacion < 7.5) {
+        console.log(partida.estado)
         partida.estado = "MENOR_DE_SIETE_Y_MEDIO";
     }
     if (partida.puntuacion === 7.5) {

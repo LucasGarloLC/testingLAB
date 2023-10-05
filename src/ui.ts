@@ -59,12 +59,12 @@ const muestraPuntuacion = (mensaje: string = ""): void => {
     }        
 };
 
-const dameCarta = (): number => {
+export const dameCarta = (): number => {
     const numeroAleatorio = generarNumeroAleatorio();
     return numeroAleatorio > 7 ? numeroAleatorio + 2 : numeroAleatorio;
 };
 
-const obtenerUrlCarta = (carta: number): string => {
+export const obtenerUrlCarta = (carta: number): string => {
     let urlImagen: string;
     switch (carta) {
         case 1 :
@@ -123,12 +123,12 @@ const finalDeLaMano = (): void => {
     }
 };
 
-const hemosGanadoPartida = () => {
+export const hemosGanadoPartida = () => {
     muestraPuntuacion(`Has ganado.`)
     deshabilitarBotonesPartidaGanada();
 };
 
-const hemosPerdidoPartida = () => {
+export const hemosPerdidoPartida = () => {
     muestraPuntuacion(`GAME OVER ⚰️`)
     deshabilitarBotonesPartidaPerdida();
 };
